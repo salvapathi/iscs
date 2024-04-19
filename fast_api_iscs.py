@@ -6,9 +6,6 @@ import os
 
 # Create an instance of FastAPI
 app = FastAPI()
-
-
-
 hostname = os.environ.get('DB_HOSTNAME')
 username = os.environ.get('DB_USERNAME')
 password = os.environ.get('DB_PASSWORD')
