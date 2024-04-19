@@ -1,18 +1,15 @@
-
 import mysql.connector
 import pandas as pd
 from fastapi import FastAPI
-from fastapi.responses import JSONResponse
+import uvicorn
+import os
 
 # Create an instance of FastAPI
 app = FastAPI()
-
-# Define database credentials
-hostname = "salvadatabase.mysql.database.azure.com"
-username = "manapakadatabase"
-password = "Salva@123"
-database = "iscs"
-
+hostname = os.environ.get('DB_HOSTNAME')
+username = os.environ.get('DB_USERNAME')
+password = os.environ.get('DB_PASSWORD')
+database = os.environ.get('DB_NAME')
 # Establish connection to the database
 connection = mysql.connector.connect(
     host=hostname,
