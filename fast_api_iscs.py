@@ -5,7 +5,7 @@ import uvicorn
 import os
 
 # Create an instance of FastAPI
-app = FastAPI()
+app = FastAPI(title="REST API using FastAPI PostgreSQL Async EndPoints")
 hostname = os.environ.get('DB_HOSTNAME')
 username = os.environ.get('DB_USERNAME')
 password = os.environ.get('DB_PASSWORD')
