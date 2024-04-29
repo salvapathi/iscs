@@ -1,5 +1,6 @@
 mysql-connector-python
-pandas
 fastapi
 uvicorn
 gunicorn
+pytz
+pandas
