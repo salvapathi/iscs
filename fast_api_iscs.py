@@ -29,13 +29,13 @@ if connection.is_connected():
 
     # Define a route to execute the SELECT query
     @app.get("/recruitment/")
-    def get_recruitment_data(user_name: str,technology: str,request: Request): #
+    def get_recruitment_data(user_name: str,technology: str): #
        
         
 
        
-        # Get the client's IP address
-        client_ip = request.client.host
+      
+        
         # Create a cursor object
         cursor = connection.cursor()
 
@@ -56,8 +56,8 @@ if connection.is_connected():
 
         # Convert IST time to MySQL datetime format (YYYY-MM-DD HH:MM:SS)
         ist_time_str = ist_time.strftime('%Y-%m-%d %H:%M:%S')
-        time_stamp_sql="INSERT INTO customer_login_details (user_name,api_hit_time,ip_address) VALUE (%s,%s,%s)"
-        cursor.execute(time_stamp_sql, (user_name,ist_time_str,client_ip))
+        time_stamp_sql="INSERT INTO customer_login_details (user_name,api_hit_time VALUE (%s,%s)"
+        cursor.execute(time_stamp_sql, (user_name,ist_time_str))
         connection.commit()
   
         
