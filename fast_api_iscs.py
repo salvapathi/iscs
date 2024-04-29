@@ -19,6 +19,7 @@ username = os.environ.get('DB_USERNAME')
 password = os.environ.get('DB_PASSWORD')
 database = os.environ.get('DB_NAME')
 
+
 # # Define database credentials
 
 def connection_db():
@@ -82,10 +83,10 @@ def get_recruitment_data(user_name: str,technology: str,credentials: HTTPBasicCr
         connection.commit()
         print("the data base is connected and ready to fetch the  data ")
         return df.iloc[:, :10].to_dict(orient="records")
-
     finally:
-        cursor.close()
-        connection.close()
+        print("the data base is still connected and ready to fetch the data ")
+
+    
 
 
 class Record(BaseModel):
