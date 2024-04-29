@@ -28,6 +28,7 @@ def connection_db():
         password=password,
         database=database
     )
+
 connection=connection_db()
    
 def authenticate(credentials: HTTPBasicCredentials = Depends(HTTPBasic())):
@@ -52,8 +53,8 @@ def authenticate(credentials: HTTPBasicCredentials = Depends(HTTPBasic())):
 @app.get("/recruitment_data_view/",summary="Get recruitment data", description="Retrieve recruitment data based on technology")
 def get_recruitment_data(user_name: str,technology: str,credentials: HTTPBasicCredentials = Depends(authenticate)): 
     
-    
-   
+    user_name = user_name.lower()
+    technology=technology.lower()
     # Create a cursor object
     cursor = connection.cursor()
 
