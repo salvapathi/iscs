@@ -40,7 +40,7 @@ if connection.is_connected():
         cursor = connection.cursor()
 
         # Execute the SELECT query
-        cursor.execute("SELECT * FROM Recruitment WHERE `Skill / Technology` = %s", (technology,))
+        cursor.execute("SELECT * FROM Recruitment WHERE `Skill_Technology` = %s", (technology,))
         
         # Fetch column names
         columns = [col[0] for col in cursor.description]
