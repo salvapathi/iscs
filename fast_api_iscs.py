@@ -17,14 +17,11 @@ import re
 
 # Create an instance of FastAPI
 app = FastAPI(title=" FastAPI mysql server iscs Recruiter data viewer")
-# hostname = os.environ.get('DB_HOSTNAME')
-# username = os.environ.get('DB_USERNAME')
-# password = os.environ.get('DB_PASSWORD')
-# database = os.environ.get('DB_NAME')
-hostname="salvadatabase.mysql.database.azure.com"
-username="manapakadatabase"
-password="Salva@123"
-database="iscs"
+hostname = os.environ.get('DB_HOSTNAME')
+username = os.environ.get('DB_USERNAME')
+password = os.environ.get('DB_PASSWORD')
+database = os.environ.get('DB_NAME')
+
 
 # # Define database credentials
 
