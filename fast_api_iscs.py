@@ -24,8 +24,8 @@ hostname = os.environ.get('DB_HOSTNAME')
 username = os.environ.get('DB_USERNAME')
 password = os.environ.get('DB_PASSWORD')
 database = os.environ.get('DB_NAME')
-ADMIN_USERNAME = os.getenv("ADMIN_USERNAME")
-ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
+# ADMIN_USERNAME = os.getenv("ADMIN_USERNAME")
+# ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 
 # ADMIN_USERNAME = "salva"
 # ADMIN_PASSWORD = "pass"
